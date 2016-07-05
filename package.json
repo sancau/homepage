@@ -1,0 +1,27 @@
+{
+  "name": "homepage",
+  "version": "0.0.1",
+  "description": "Developing my homepage..",
+  "keywords": [
+    "gulp",
+    "typescript",
+    "jade",
+    "sass"
+  ],
+  "author": "Alexander Tatchin <alexander.tatchin@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sancau/homepage.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^3.2.2",
+    "gulp-jade": "^1.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-typescript": "^2.13.6",
+    "run-sequence": "^1.1.5",
+    "systemjs": "^0.19.31"
+  }
+}
