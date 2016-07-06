@@ -1,0 +1,14 @@
+doctype
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  title= page.title
+body
+  h1= content.header 
+  hr
+  ul
+    each link in links
+      li: a(href=link)= link
+  hr
+  block content
+  
