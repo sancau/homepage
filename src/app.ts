@@ -1,10 +1,16 @@
-var express = require('express');
+'use strict';
+
+import * as express from "express";
+
 var app = express();
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
+var lyrics = 'ATATA'
+
+app.get('/', function(req:express.Request, res:express.Response){
+  res.send(`<h1>${lyrics}</h1>`);
 });
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+app.listen(3000, function(){
+  console.log('Listening on port 3000...');
 });
+
