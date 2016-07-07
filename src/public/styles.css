@@ -1,6 +1,6 @@
 body {
   margin-top: 20px;
-  background-color: #ffffff;
+  background-color: white;
   background-image: url('images/background-white.jpg');
   color: #222;
   font-family: 'Maven Pro', sans-serif;
@@ -35,7 +35,20 @@ a {
   font-weight: bold;
 }
 
+.active {
+  background-color: #217C7E;
+  color: white;
+}
+
+.active:hover {
+  background-color: #217C7E;
+  color: white;
+  font-weight: normal;
+  border: 2px solid #333;
+}
+
 .container {
   border-left: 20px solid #217C7E;
   border-right: 20px solid #217C7E;
 }
+
