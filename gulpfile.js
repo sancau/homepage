@@ -43,6 +43,20 @@ gulp.task('templates', function(){
 });
 
 
+// Collect public
+gulp.task('collectPublic', function(err){
+    return gulp.src(srcLocation + '/public/**/*.*')
+    .pipe(
+        plumber({
+            handleError: function(err) {
+                console.log(err);
+                this.emit('end');
+            }
+        })
+    )
+    .pipe(gulp.dest(devBuildLocation + '/public'));
+});
+
 // Task groups
 gulp.task('onTypescriptChange', function(){
     runSequence(
@@ -61,6 +75,7 @@ gulp.task('onTemplateChange', function(){
 gulp.task('watch', function(){
     gulp.watch(srcLocation + '/**/*.ts', ['onTypescriptChange']);
     gulp.watch(srcLocation + '/views/**/*.jade', ['onTemplateChange']);
+    gulp.watch(srcLocation + '/public/**/*.*', ['collectPublic'])
 });
 
 
@@ -69,6 +84,7 @@ gulp.task('dev', function(){
     runSequence(
         'typescript',
         'templates',
+        'collectPublic',
         'watch'
     );
 });

@@ -3,23 +3,26 @@ html(lang="en")
 head
   meta(charset="UTF-8")
   title= title
+  link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
   link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Maven+Pro")
   link(rel="stylesheet", href="styles.css")
 body
   .container
-    h2 Alexander Tatchin 
+    h3 Alexander Tatchin 
       span.blue
         strong | Full stack web development 
-      span.green
+      span.red
         strong | Creative solutions
-    a(href="/"): div.link Bio
-    a(href="about"): div.link Skills
-    a(href="about"): div.link Proofs
+    br
+    div.navigation
+        a(href="/").link Bio
+        a(href="/").link Skills
+        a(href="/").link Works
+    div.content
+        block content
     
-    
-    
-    block content
-  
-  p My name is Alexander Tatchin. I'm doing full stack web development mostly using Javascript and it's variations.
-  p I beliave that a good designed solution has to be ruled by it's purpose. I'm against overcomplication and stand for clever minimalism. 
-  p (c) 2016 sancau
+    hr
+    p.blue My name is Alexander Tatchin. I'm doing full stack web development mostly using Javascript and it's variations.
+    p.blue I beliave that a good designed solution has to be ruled by it's purpose. I'm against overcomplication and stand for clever minimalism. 
+    p.red (c) 2016 
+      a(href="/") AT
