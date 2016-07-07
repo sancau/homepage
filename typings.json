@@ -1,5 +1,5 @@
 {
-  "name": "homepage",
+  "name": "expressboiler",
   "dependencies": {
     "mime": "registry:npm/mime#1.3.0+20160423043021"
   },
